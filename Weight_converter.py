@@ -14,12 +14,24 @@ def  lb_to_kg():
     lb = int(input("Enter the pounds(lb) you want to convert! "))
     print("The value in kilograms will be",lb/2.205, "kg")
 
+def kg_to_oz():
+    kgs = int(input("Enter the kilograms(kg) you want to convert to ounces! "))
+    print("The value in ounces will be",kgs*35.274, "oz")
+
+def oz_to_kg():
+    oz = int(input("Enter the ounces(oz) you want to convert to kilograms! "))
+    print("The value in kilograms will be",oz/35.274, "kg")
+
+
+
 
 print("Choose the options given below!")
 print("Enter 1 to convert (kg -> g)!")
 print("enter 2 to convert (g -> kg)!")
 print("Enter 3 to convert (kg -> lb)!")
 print("Enter 4 to convert (lb -> kg)!") 
+print("Enter 5 to convert (kg -> oz)!")
+print("Enter 6 to convert (oz -> kg)!")
 
 choice = int(input("Enter your choice! "))
 while True:
@@ -35,9 +47,14 @@ while True:
     elif choice == 4:
         lb_to_kg()
         break
+    elif choice == 5:
+        kg_to_oz()
+        break
+    elif choice == 6:
+        oz_to_kg()
+        break
+
     
-
-
 
 
 
