@@ -3,7 +3,8 @@ print("Welcome to the shopping cart!")
 print("Please select the items given below!")
 
 print("Type '1' for household items:")
-print("Type '2' for electronics items")
+print("Type '2' for electronics items:")
+print("Type '3' for mechanical items:")
 
 
 def house_items():
@@ -13,7 +14,7 @@ def house_items():
         print("Type 'B' for kitchenware(pots,pans,cutlery)!")
         print("Type 'C' for cleaning supplies(broom,mop,vaccum)!")
 
-        item = input("Type your choices! ")
+        item = input("Type your choices! ").upper()
         if item == "A":
                 quantity = float(input("The price for one furniture item is $100,how many would you like? "))
                 total = quantity * 100
@@ -43,7 +44,7 @@ def electronics_items():
         print("Type 'B' for refrigerators!")
         print("Type 'C' for audio equipments!")
 
-        item = input("Type your choices! ")
+        item = input("Type your choices! ").upper()
         if item == "A":
                 quantity = float(input("The price for one smartphone  item is $800,how many would you like? "))
                 total = quantity * 800
@@ -66,6 +67,37 @@ def electronics_items():
                 print("please next time select the correct option!")
 
 
+def mechanical_items():
+        print("you chose mechanical items,the item list is given below!")
+
+        print("Type 'A' for fasteners(screws,bolts,nuts)!")
+        print("Type 'B' for power transmission(gears,bolts,bearings)")
+        print("Type 'C' for hydraulic components!")
+
+        item = input("Type your choices! ").upper()
+        if item == "A":
+                quantity = float(input("The price for one fastener  item is $400,how many would you like? "))
+                total = quantity * 400
+                print(f"your total is: ${total}")
+                print("please visit again!")
+
+        elif item == "B":
+                quantity = float(input("The price for one power transmission item is $900,how many would you like? "))
+                total = quantity * 900
+                print(f"your total is: ${total}")
+                print("please visit again!")
+
+        elif item == "C":
+                quantity = float(input("The price for one hydraulic item is 1200,how many would you like? "))
+                total = quantity * 1200
+                print(f"your total is: ${total}")
+                print("please visit again!")
+
+        else:
+                print("please next time choose the correct option!")
+
+
+
 
 while True:
         item = int(input("Which item would you like to buy? "))
@@ -75,6 +107,10 @@ while True:
         elif item == 2:
                 electronics_items()
                 break 
+
+        elif item == 3:
+                mechanical_items()
+                break
 
 
 
