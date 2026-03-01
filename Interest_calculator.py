@@ -1,39 +1,41 @@
 def compound_interest():
-    principle = float(input("Enter the principle amount: "))
-    if principle <= 0:
-        print("principle amount can not be less than or equal to zero:")
+    principal = float(input("Enter the principal amount: "))
+    if principal <= 0:
+        print("principal amount can not be less than or equal to zero:")
 
     interest_rate = float(input("Enter the interest rate : "))
     if interest_rate <= 0:
         print("Interest rate can not be less than or equal to zero:")
 
 
-    time = float(input("Enter the time: "))
+    time = float(input("Enter the time in years: "))
     if time <= 0:
         print("Time can not be less than or equal to zero:")
 
-    total = principle * pow((1 + interest_rate/100) , time)
+    total = principal * pow((1 + interest_rate/100) , time)
 
-    print(f"Balance after {time} is: ${total:.1f}")
+    print(f"compound interest after {time:.0f} years will be: ${(total - principal):.1f}")
+    print(f"Balance after {time:.0f} years will be: ${total:.1f}")
 
 
 def simple_interest():
-    principle = float(input("Enter the principle amount: "))
-    if principle <= 0:
-        print("principle amount can not be less than or equal to zero:")
+    principal = float(input("Enter the principal amount: "))
+    if principal <= 0:
+        print("principal amount can not be less than or equal to zero:")
 
     interest_rate = float(input("Enter the interest rate : "))
     if interest_rate <= 0:
         print("Interest rate can not be less than or equal to zero:")
 
 
-    time = float(input("Enter the time: "))
+    time = float(input("Enter the time in years: "))
     if time <= 0:
         print("Time can not be less than or equal to zero:")
 
-    total = (principle * interest_rate * time)/100
+    total = (principal * interest_rate * time)/100
 
-    print(f"Balance after {time} is: ${total:.1f}")
+    print(f"Simple interest after {time:.0f} years will be: ${total:.1f}")
+    print(f"Balance after {time:.0f} years will be: ${total + principal}")
 
 
 print("Welcome to the interest calculator")
@@ -51,6 +53,8 @@ while True:
     elif choice == "compound":
         compound_interest()
         break
+    else:
+        print("Please select the correct option!")
 
 
 
