@@ -38,10 +38,34 @@ def simple_interest():
     print(f"Balance after {time:.0f} years will be: ${total + principal}")
 
 
+def continous_compound_interest():
+    principal = float(input("Enter the principal amount: "))
+    if principal <= 0:
+        print("principal amount can not be less than or equal to zero:")
+
+    interest_rate = float(input("Enter the interest rate : "))
+    if interest_rate <= 0:
+        print("Interest rate can not be less than or equal to zero:")
+
+
+    time = float(input("Enter the time in years: "))
+    if time <= 0:
+        print("Time can not be less than or equal to zero:")
+
+    interest_rate = interest_rate / 100
+    total = principal * pow(2.718, interest_rate * time)
+
+    print(f"continous compound interest after {time:.0f} years will be: ${(total - principal):.1f}")
+    print(f"Balance after {time:.0f} years will be: ${total:.1f}")
+
+    
+
+
+
 print("Welcome to the interest calculator")
 while True:
     choice = input(
-    "Please choose the type of interest( simple/compound ) you want to calculate( Q to quit)! ").lower()
+    "Please choose the type of interest( simple/compound/continous) you want to calculate( Q to quit)! ").lower()
     if choice == "q":
         print("Well if you change your mind try again good luck!")
         break
@@ -53,6 +77,11 @@ while True:
     elif choice == "compound":
         compound_interest()
         break
+
+    elif choice == "continous":
+        continous_compound_interest()
+        break
+
     else:
         print("Please select the correct option!")
 
