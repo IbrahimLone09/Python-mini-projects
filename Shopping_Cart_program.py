@@ -6,6 +6,7 @@ print("Type '1' for household items:")
 print("Type '2' for electronics items:")
 print("Type '3' for mechanical items:")
 print("Type '4' for clothing items:")
+print("Type '5' for food items:")
 
 
 def house_items():
@@ -128,23 +129,61 @@ def clothing_item():
                 print("please next time select the correct option!")
 
 
+def food_items():
+        print("you chose food items,the item list is given below!")
+
+        print("Type 'A' for Grains/Flour(Rice, wheat flour,bread,oats...)!")
+        print("Type 'B' for Dairy(milk,butter,cheese...) !")
+        print("Type 'C' for oils/spices(cooking oil,turmeric ,cumin) !")
+
+        item = input("Type your choices! ").upper()
+        if item == "A":
+                quantity = float(input("The price for one Grains/Flour  item is $30,how many would you like? "))
+                total = quantity * 15
+                print(f"your total is: ${total}")
+                print("please visit again!")
+
+        elif item == "B":
+                quantity = float(input("The price for one Diary item is $25,how many would you like? "))
+                total = quantity * 25
+                print(f"your total is: ${total}")
+                print("please visit again!")
+
+        elif item == "C":
+                quantity = float(input("The price for one oils/spices item is $42,how many would you like? "))
+                total = quantity * 42
+                print(f"your total is: ${total}")
+                print("please visit again!")
+
+        else:
+                print("please next time select the correct option!")
+
+
 
 while True:
-        item = int(input("Which item would you like to buy? "))
-        if item == 1:
+        item = input("Which item would you like to buy? ")
+        if item == "1":
                 house_items()
                 break
-        elif item == 2:
+
+        elif item == "2":
                 electronics_items()
                 break 
 
-        elif item == 3:
+        elif item == "3":
                 mechanical_items()
                 break 
         
-        elif item == 4:
+        elif item == "4":
                 clothing_item()
                 break
+        
+        elif item == "5":
+                food_items()
+                break
+
+        else:
+                print("please enter the valid option!")
 
 
 
