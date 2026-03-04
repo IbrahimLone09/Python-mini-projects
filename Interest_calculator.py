@@ -61,7 +61,6 @@ def continous_compound_interest():
     
 
 
-
 print("Welcome to the interest calculator")
 while True:
     choice = input(
