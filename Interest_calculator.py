@@ -38,7 +38,7 @@ def simple_interest():
     print(f"Balance after {time:.0f} years will be: ${total + principal}")
 
 
-def continous_compound_interest():
+def continuous_compound_interest():
     principal = float(input("Enter the principal amount: "))
     if principal <= 0:
         print("principal amount can not be less than or equal to zero:")
@@ -71,15 +71,15 @@ while True:
 
     elif choice == "simple":
         simple_interest()
-        break
+        
     
     elif choice == "compound":
         compound_interest()
-        break
+        
 
-    elif choice == "continous":
-        continous_compound_interest()
-        break
+    elif choice == "continuous":
+        continuous_compound_interest()
+        
 
     else:
         print("Please select the correct option!")

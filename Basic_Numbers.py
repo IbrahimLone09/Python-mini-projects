@@ -51,29 +51,34 @@ def natural():
 
 
 
-choice = input("Which numbers you would like to print,TYPE(prime,odd,even etc...): ").lower()
 while True:
-    if choice == "even":
-        even()
+    choice = input("Which numbers you would like to print,TYPE(prime,odd,even etc...) (Q to quit!): ").lower()
+    if choice == "q":
         break
+    elif choice == "even":
+        even()
+        
        
     elif choice == "prime":
         prime()
-        break
+        
+
     elif choice == "odd":
         odd()
-        break
+       
+
     elif choice == "whole":
         whole()
-        break
+       
 
     elif choice == "composite":
         composite()
-        break
+        
+
     elif choice == "natural":
         natural()
-        break
+      
 
     else:
         print("Next time please choose from the above options!")
-        break
+      

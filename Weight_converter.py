@@ -42,30 +42,33 @@ def oz_to_kg():
 
 
 while True:
-    choice = input("Enter your choice! ")
-    if choice == "1":
-        kg_to_g()
+    choice = input("Enter your choice (Q to exit!): ").lower()
+    if choice == "q":
         break
+
+    elif choice == "1":
+        kg_to_g()
+       
 
     elif choice == "2":
         g_to_kg()
-        break
+        
 
     elif choice == "3":
         kg_to_lb()
-        break
+        
 
     elif choice == "4":
         lb_to_kg()
-        break
+        
 
     elif choice == "5":
         kg_to_oz()
-        break
+        
 
     elif choice == "6":
         oz_to_kg()
-        break
+
 
     else:
         print("Please select the correct option!")

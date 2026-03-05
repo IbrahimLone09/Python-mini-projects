@@ -2,12 +2,6 @@ print("Welcome to the shopping cart!")
 
 print("Please select the items given below!")
 
-print("Type '1' for household items:")
-print("Type '2' for electronics items:")
-print("Type '3' for mechanical items:")
-print("Type '4' for clothing items:")
-print("Type '5' for food items:")
-
 
 def house_items():
         print("you chose household items,the item list is given below!")
@@ -161,26 +155,36 @@ def food_items():
 
 
 while True:
-        item = input("Which item would you like to buy? ")
-        if item == "1":
-                house_items()
+        print("Type '1' for household items:")
+        print("Type '2' for electronics items:")
+        print("Type '3' for mechanical items:")
+        print("Type '4' for clothing items:")
+        print("Type '5' for food items:")
+
+        item = input("Which item would you like to buy?  (Q to quit!): ").lower()
+        if item == "q":
                 break
+
+
+        elif item == "1":
+                house_items()
+                
 
         elif item == "2":
                 electronics_items()
-                break 
+                
 
         elif item == "3":
                 mechanical_items()
-                break 
+                
         
         elif item == "4":
                 clothing_item()
-                break
+                
         
         elif item == "5":
                 food_items()
-                break
+                
 
         else:
                 print("please enter the valid option!")
