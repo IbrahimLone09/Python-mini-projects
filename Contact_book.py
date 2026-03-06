@@ -1,3 +1,5 @@
+ # Simple Program to save contacts of a person
+
 contacts = {}
 
 print("Welcome to contact book!")
