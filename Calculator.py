@@ -2,28 +2,23 @@
 
 print("calculate whatever you like!")
 
+a = int(input("Enter the first number: "))
+operator = input("Enter the operator: ")
+b = int(input("Enter the second number: "))
 
 while True:
-    a ,b = int(input("Enter the first number: "))
-    operator = input("Enter the operator (Q to Exit!): ")
-    break
-    b = int(input("Enter the second number: "))
-
-
     if operator == ("+"):
         print("sum is =", a + b)
-        
+        break
 
     elif operator == ("-"):
         print("Difference is =",a - b)
-        
+        break
 
     elif operator == ("*"):
         print("Multiplication is =", a * b)
-        
+        break
 
     elif operator == ("/"):
         print("Division is =", a / b)
-        
-    else:
-        print("Please enter the valid option!")
+        break
